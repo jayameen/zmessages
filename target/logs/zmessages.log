@@ -1,0 +1,68 @@
+2024-05-19 16:15:30,726 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZMessagesApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 24785 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 16:15:30,727 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 16:15:30,728 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-05-19 16:15:30,742 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 16:15:30,742 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 16:15:31,029 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2024-05-19 16:15:31,033 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-19 16:15:31,033 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 16:15:31,033 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 16:15:31,076 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 16:15:31,079 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 16:15:31,079 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 337 ms
+2024-05-19 16:15:31,200 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 16:15:31,206 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8085"]
+2024-05-19 16:15:31,208 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8085 is already in use
+2024-05-19 16:15:31,209 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Pausing ProtocolHandler ["http-nio-8085"]
+2024-05-19 16:15:31,209 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-05-19 16:15:31,211 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping ProtocolHandler ["http-nio-8085"]
+2024-05-19 16:15:31,211 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Destroying ProtocolHandler ["http-nio-8085"]
+2024-05-19 16:15:31,214 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-19 16:15:31,220 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8085 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8085 or configure this application to listen on another port.
+
+2024-05-19 16:15:59,348 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZMessagesApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 25122 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 16:15:59,350 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 16:15:59,350 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-05-19 16:15:59,366 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 16:15:59,366 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 16:15:59,642 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 16:15:59,646 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 16:15:59,646 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 16:15:59,646 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 16:15:59,689 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 16:15:59,692 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 16:15:59,692 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 325 ms
+2024-05-19 16:15:59,803 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 16:15:59,808 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2024-05-19 16:15:59,817 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zfiles'
+2024-05-19 16:15:59,821 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZMessagesApplication in 0.592 seconds (JVM running for 0.8)
+2024-05-19 17:25:43,702 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZMessagesApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 30492 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 17:25:43,703 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 17:25:43,704 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-05-19 17:25:43,719 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 17:25:43,719 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 17:25:44,004 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 17:25:44,007 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 17:25:44,007 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 17:25:44,007 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 17:25:44,048 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 17:25:44,051 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 17:25:44,051 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 332 ms
+2024-05-19 17:25:44,161 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 17:25:44,166 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2024-05-19 17:25:44,174 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zfiles'
+2024-05-19 17:25:44,179 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZMessagesApplication in 0.598 seconds (JVM running for 0.812)
