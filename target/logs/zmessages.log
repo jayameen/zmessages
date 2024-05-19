@@ -66,3 +66,190 @@ Identify and stop the process that's listening on port 8085 or configure this ap
 2024-05-19 17:25:44,166 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
 2024-05-19 17:25:44,174 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zfiles'
 2024-05-19 17:25:44,179 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZMessagesApplication in 0.598 seconds (JVM running for 0.812)
+2024-05-19 18:20:04,413 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 65316 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 18:20:04,414 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 18:20:04,414 INFO org.springframework.boot.SpringApplication [restartedMain] The following 1 profile is active: "default"
+2024-05-19 18:20:04,429 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 18:20:04,429 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 18:20:04,717 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 18:20:04,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:20:04,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 18:20:04,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 18:20:04,763 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 18:20:04,766 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 18:20:04,766 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 337 ms
+2024-05-19 18:20:04,782 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ZMessagesAPI' defined in file [/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes/com/jayameen/zmessages/api/ZMessagesAPI.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.jayameen.zmessages.factory.EmailService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-05-19 18:20:04,783 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-05-19 18:20:04,787 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-19 18:20:04,793 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.jayameen.zmessages.api.ZMessagesAPI required a bean of type 'com.jayameen.zmessages.factory.EmailService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.jayameen.zmessages.factory.EmailService' in your configuration.
+
+2024-05-19 18:22:13,029 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 66715 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 18:22:13,030 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 18:22:13,030 INFO org.springframework.boot.SpringApplication [restartedMain] The following 1 profile is active: "default"
+2024-05-19 18:22:13,044 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 18:22:13,044 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 18:22:13,319 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 18:22:13,322 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:22:13,323 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 18:22:13,323 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 18:22:13,364 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 18:22:13,367 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 18:22:13,368 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 324 ms
+2024-05-19 18:22:13,385 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ZMessagesAPI' defined in file [/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes/com/jayameen/zmessages/api/ZMessagesAPI.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationBeanConfigurations': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.smtp.gmail.user' in value "${app.smtp.gmail.user}"
+2024-05-19 18:22:13,386 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-05-19 18:22:13,391 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-19 18:22:13,397 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ZMessagesAPI' defined in file [/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes/com/jayameen/zmessages/api/ZMessagesAPI.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationBeanConfigurations': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.smtp.gmail.user' in value "${app.smtp.gmail.user}"
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jayameen.zmessages.ZApplication.main(ZApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationBeanConfigurations': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.smtp.gmail.user' in value "${app.smtp.gmail.user}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.smtp.gmail.user' in value "${app.smtp.gmail.user}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 45 common frames omitted
+2024-05-19 18:23:01,331 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 67257 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 18:23:01,332 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 18:23:01,332 INFO org.springframework.boot.SpringApplication [restartedMain] The following 1 profile is active: "default"
+2024-05-19 18:23:01,346 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 18:23:01,347 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 18:23:01,632 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 18:23:01,635 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:23:01,636 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 18:23:01,636 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 18:23:01,679 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 18:23:01,682 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 18:23:01,682 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 335 ms
+2024-05-19 18:23:01,809 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 18:23:01,814 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:23:01,823 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zmessages'
+2024-05-19 18:23:01,827 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZApplication in 0.618 seconds (JVM running for 0.831)
+2024-05-19 18:27:55,875 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19 18:27:55,877 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-05-19 18:27:55,879 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-1] Completed initialization in 2 ms
+2024-05-19 18:28:24,595 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 70700 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 18:28:24,596 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 18:28:24,596 INFO org.springframework.boot.SpringApplication [restartedMain] The following 1 profile is active: "default"
+2024-05-19 18:28:24,612 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 18:28:24,612 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 18:28:25,006 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 18:28:25,009 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:28:25,010 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 18:28:25,010 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 18:28:25,062 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 18:28:25,066 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 18:28:25,066 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 454 ms
+2024-05-19 18:28:25,198 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 18:28:25,204 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:28:25,218 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zmessages'
+2024-05-19 18:28:25,223 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZApplication in 0.758 seconds (JVM running for 1.161)
+2024-05-19 18:28:32,004 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19 18:28:32,005 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-05-19 18:28:32,005 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Completed initialization in 0 ms
+2024-05-19 18:39:19,176 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 77640 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 18:39:19,177 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 18:39:19,178 INFO org.springframework.boot.SpringApplication [restartedMain] The following 1 profile is active: "default"
+2024-05-19 18:39:19,191 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 18:39:19,192 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 18:39:19,480 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 18:39:19,484 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:39:19,484 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 18:39:19,484 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 18:39:19,535 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 18:39:19,538 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 18:39:19,538 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 346 ms
+2024-05-19 18:39:19,675 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 18:39:19,681 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:39:19,691 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zmessages'
+2024-05-19 18:39:19,696 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZApplication in 0.637 seconds (JVM running for 0.971)
+2024-05-19 18:39:54,034 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ZApplication using Java 17.0.5 on MacBook-Pro-5.local with PID 78073 (/Users/madan/Documents/JayaMeen/GitHub/zmessages/target/classes started by madan in /Users/madan/Documents/JayaMeen/GitHub/zmessages)
+2024-05-19 18:39:54,035 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-05-19 18:39:54,035 INFO org.springframework.boot.SpringApplication [restartedMain] The following 1 profile is active: "default"
+2024-05-19 18:39:54,051 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-19 18:39:54,051 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-19 18:39:54,330 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2024-05-19 18:39:54,333 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:39:54,333 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-05-19 18:39:54,334 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-05-19 18:39:54,373 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-05-19 18:39:54,376 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-05-19 18:39:54,376 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 325 ms
+2024-05-19 18:39:54,498 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2024-05-19 18:39:54,503 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2024-05-19 18:39:54,512 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path '/zmessages'
+2024-05-19 18:39:54,516 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZApplication in 0.601 seconds (JVM running for 0.812)
+2024-05-19 18:40:02,117 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19 18:40:02,118 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-05-19 18:40:02,120 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Completed initialization in 2 ms

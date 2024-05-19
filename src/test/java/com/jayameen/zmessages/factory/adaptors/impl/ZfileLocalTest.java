@@ -4,7 +4,6 @@ package com.jayameen.zmessages.factory.adaptors.impl;
  * @author Madan KN
  */
 
-import com.jayameen.zmessages.dto.MessageRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
