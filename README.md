@@ -5,7 +5,7 @@ A simple library for displaying messages in the console.
 ### How to use API? (Examples)
 <details>
 <summary> 
-Create  or Update Object From Base64 String
+Send Simple Mail
 </summary>
 
 Methods: POST
@@ -40,7 +40,7 @@ Success Response: 200 OK
 
 <details>
 <summary> 
-Create  or Update Object From Base64 String
+Send MIME Mail (Attachments)
 </summary>
 
 Methods: POST
