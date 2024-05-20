@@ -244,3 +244,6 @@ Identify and stop the process that's listening on port 8086 or configure this ap
 2024-05-20 18:47:19,869 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8087"]
 2024-05-20 18:47:19,878 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8087 (http) with context path '/zmessages'
 2024-05-20 18:47:19,884 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ZApplication in 0.681 seconds (JVM running for 0.904)
+2024-05-20 18:48:30,517 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8087-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-20 18:48:30,519 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8087-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-05-20 18:48:30,520 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8087-exec-1] Completed initialization in 1 ms
