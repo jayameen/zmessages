@@ -18,6 +18,7 @@ spring:
       on-profile: default
 
 app:
+  mailer: zoho
   smtp:
     gmail:
       host: smtp.gmail.com

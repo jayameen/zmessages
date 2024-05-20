@@ -69,8 +69,12 @@ public class SMTPEmailServiceImpl implements EmailService {
             mimeMessageHelper.setSubject(details.getSubject());
 
             // Adding the attachment
-            byte[] decodedBytes = Base64.getDecoder().decode(details.getAttachmentBase64());
-            mimeMessageHelper.addAttachment(details.getAttachmentName(), new ByteArrayResource(decodedBytes));
+            if(details.getAttachments()!=null && details.getAttachments().size()>0){
+                for (int i = 0; i < details.getAttachments().size(); i++) {
+                    byte[] decodedBytes = Base64.getDecoder().decode(details.getAttachments().get(i).getAttachmentBase64());
+                    mimeMessageHelper.addAttachment(details.getAttachments().get(i).getAttachmentName(), new ByteArrayResource(decodedBytes));
+                }
+            }
 
             // Sending the mail
             javaMailSender.send(mimeMessage);
