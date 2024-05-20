@@ -2,7 +2,7 @@
 A simple library for displaying messages in the console.
 
 
-### How to use API? (Examples)
+### How to use Mail API? (Examples)
 <details>
 <summary> 
 Send Simple Mail
