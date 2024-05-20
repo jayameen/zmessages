@@ -47,10 +47,10 @@ Path:  /zmessages/api/mail
 Request Body:
 ```json
 {
-  "from_address" : "madan@xindus.net",
-  "to_address_list" : ["madan@xindus.net"],
-  "cc_address_list" : ["madan@xindus.net"],
-  "bcc_address_list" : ["madan@xindus.net"],
+  "from_address" : "madan@xx.net",
+  "to_address_list" : ["madan@xx.net"],
+  "cc_address_list" : ["madan@xx.net"],
+  "bcc_address_list" : ["madan@xx.net"],
   "subject" : "Mail Test",
   "msg_body" : "Mail Sent from ZMessages API"
 }
@@ -82,15 +82,15 @@ Path:  /zmessages/api/mail/base64
 Request Body:
 ```json
 {
-  "from_address": "madan@xindus.net",
+  "from_address": "madan@xx.net",
   "to_address_list": [
-    "madan@xindus.net"
+    "madan@xx.net"
   ],
   "cc_address_list": [
-    "madan.kn@gmail.com"
+    "madan.kn@xx.com"
   ],
   "bcc_address_list": [
-    "madan.kn@gmail.com"
+    "madan.kn@xx.com"
   ],
   "subject": "Use ZMessages API - For Sending Emails - Test 2",
   "msg_body": "Mail Sent from ZMessages API -- https://github.com/jayameen/zmessages ",
