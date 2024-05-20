@@ -14,10 +14,10 @@ Path:  /zmessages/api/sms
 Request Body:
 ```json
 {
-  "sender_name" : "XINDUS",
+  "sender_name" : "ABCCOM",
   "phone_prefix" : "+91",
   "phone_number" : "988DDD7XXX",
-  "content" : "126665 is your Xindus OTP for transacting on our platform, do not sharing your OPT with anyone and take entire responsibility for the current transaction."
+  "content" : "126665 is your ABCCOM OTP for transacting on our platform, do not sharing your OPT with anyone and take entire responsibility for the current transaction."
 }
 ```
 Success Response: 200 OK
