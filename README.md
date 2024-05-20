@@ -16,7 +16,7 @@ Request Body:
 {
   "sender_name" : "XINDUS",
   "phone_prefix" : "+91",
-  "phone_number" : "9886627324",
+  "phone_number" : "988DDD7XXX",
   "content" : "126665 is your Xindus OTP for transacting on our platform, do not sharing your OPT with anyone and take entire responsibility for the current transaction."
 }
 ```
