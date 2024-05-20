@@ -1,6 +1,38 @@
 # ZMessages
 A simple library for displaying messages in the console.
 
+### How to use SMS API? (Examples)
+<details>
+<summary> 
+Send SMS
+</summary>
+
+Methods: POST
+
+Path:  /zmessages/api/sms
+
+Request Body:
+```json
+{
+  "sender_name" : "XINDUS",
+  "phone_prefix" : "+91",
+  "phone_number" : "9886627324",
+  "content" : "126665 is your Xindus OTP for transacting on our platform, do not sharing your OPT with anyone and take entire responsibility for the current transaction."
+}
+```
+Success Response: 200 OK
+```json
+{
+  "status": "ok",
+  "code": "200 OK",
+  "description": "Operation Completed Successfully!",
+  "data": [
+    "OK"
+  ]
+}
+```
+</details>
+
 
 ### How to use Mail API? (Examples)
 <details>
