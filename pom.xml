@@ -113,9 +113,11 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
+
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
+			<groupId>com.plivo</groupId>
+			<artifactId>plivo-java</artifactId>
+			<version>5.41.0</version>
 		</dependency>
 
 		<!-- Madan KN - Deps [end]-->
@@ -123,20 +125,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>com.google.cloud</groupId>
-				<artifactId>libraries-bom</artifactId>
-				<version>26.0.0</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>com.azure</groupId>
-				<artifactId>azure-sdk-bom</artifactId>
-				<version>1.2.23</version>
-				<type>pom</type>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>

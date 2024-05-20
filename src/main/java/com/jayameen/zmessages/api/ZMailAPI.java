@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  */
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/mail")
 @RequiredArgsConstructor
 public class ZMailAPI extends BaseController {
 
@@ -22,14 +22,14 @@ public class ZMailAPI extends BaseController {
 
      private final EmailService emailService;
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    @PostMapping("/mail")
+    @PostMapping()
     public ResponseEntity<AppResponse> sendMail(@RequestBody EmailDetails details) {
         AppResponse appResponse = new AppResponse<>();
         handleObjectSuccess(appResponse, emailService.sendSimpleMail(details,MAILER));
         return ResponseEntity.ok(appResponse);
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    @PostMapping("/mail/base64")
+    @PostMapping("/base64")
     public ResponseEntity<AppResponse> sendMailBase64(@RequestBody EmailDetails details) {
         AppResponse appResponse = new AppResponse<>();
         handleObjectSuccess(appResponse, emailService.sendMailWithAttachment(details,MAILER));

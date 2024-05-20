@@ -1,7 +1,10 @@
 package com.jayameen.zmessages.config;
 
 import com.jayameen.zmessages.factory.EmailService;
+import com.jayameen.zmessages.factory.SmsService;
 import com.jayameen.zmessages.factory.impl.SMTPEmailServiceImpl;
+import com.jayameen.zmessages.factory.impl.SmsServiceImpl;
+import com.plivo.api.PlivoClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +21,7 @@ import java.util.Properties;
 @Configuration
 public class ApplicationBeanConfigurations {
 
+    // Email Config
     @Value("${app.smtp.gmail.host}") protected String GMAIL_SMTP_HOST;
     @Value("${app.smtp.gmail.port}") protected Integer GMAIL_SMTP_PORT;
     @Value("${app.smtp.gmail.username}") protected String GMAIL_USER;
@@ -29,6 +33,10 @@ public class ApplicationBeanConfigurations {
     @Value("${app.smtp.zoho.password}") protected String ZOHO_PASSWORD;
 
     @Value("${app.smtp.debug}") private Boolean debug;
+
+    // Sms Config
+    @Value("${app.sms.plivo.auth-id}") private String PLIVO_AUTH_ID;
+    @Value("${app.sms.plivo.auth-token}") private String PLIVO_AUTH_TOKEN;
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -70,9 +78,20 @@ public class ApplicationBeanConfigurations {
         return mailSender;
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @Bean("plivoClient")
+    public PlivoClient plivoClient() {
+        PlivoClient client = new PlivoClient(PLIVO_AUTH_ID, PLIVO_AUTH_TOKEN);
+        return client;
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Bean
     public EmailService emailService(){
         return new SMTPEmailServiceImpl();
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @Bean
+    public SmsService smsService(){
+        return new SmsServiceImpl();
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

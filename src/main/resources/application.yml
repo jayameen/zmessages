@@ -23,12 +23,19 @@ app:
     gmail:
       host: smtp.gmail.com
       port: 587
-      username: ${GMAIL_USERNAME}
-      password: ${GMAIL_PASSWORD}
+      username: ${GMAIL_USERNAME:'default'}
+      password: ${GMAIL_PASSWORD:'default'}
     zoho:
       host: smtp.zeptomail.in
       port: 587
-      username: ${ZOHOMAIL_USERNAME}
-      password: ${ZOHOMAIL_PASSWORD}
+      username: ${ZOHOMAIL_USERNAME:'default'}
+      password: ${ZOHOMAIL_PASSWORD:'default'}
     debug: true
+  smser: plivo
+  sms:
+    plivo:
+        auth-id: ${PLIVO_AUTH_ID:'default'}
+        auth-token: ${PLIVO_AUTH_TOKEN:'default'}
+
+
 
