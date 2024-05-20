@@ -34,7 +34,10 @@ public class EmailDetails {
     @JsonProperty("subject")
     private String subject;
 
-    @JsonProperty("attachment")
-    private String attachment;
+    @JsonProperty("attachment_name")
+    private String attachmentName;
+
+    @JsonProperty("attachment_base64")
+    private String attachmentBase64;
 
 }

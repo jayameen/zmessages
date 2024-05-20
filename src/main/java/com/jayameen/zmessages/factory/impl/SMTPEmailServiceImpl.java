@@ -3,26 +3,26 @@ package com.jayameen.zmessages.factory.impl;
 import com.jayameen.zmessages.dto.EmailDetails;
 import com.jayameen.zmessages.factory.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+
 import javax.mail.internet.MimeMessage;
-import java.io.File;
+import java.util.Base64;
 
 /**
  * @author Madan KN
  */
 public class SMTPEmailServiceImpl implements EmailService {
 
+
     @Autowired private JavaMailSender gmailJavaMailSender;
+    @Autowired private JavaMailSender zohoJavaMailSender;
 
-
-    // Method 1
-    // To send a simple email
-    public String sendSimpleMail(EmailDetails details)
-    {
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public String sendSimpleMail(EmailDetails details, String smtpSender) {
+        JavaMailSender javaMailSender = getMailSender(smtpSender);
         // Try block to check for exceptions
         try {
 
@@ -38,7 +38,7 @@ public class SMTPEmailServiceImpl implements EmailService {
             mailMessage.setSubject(details.getSubject());
 
             // Sending the mail
-            gmailJavaMailSender.send(mailMessage);
+            javaMailSender.send(mailMessage);
             return "Mail Sent Successfully...";
         }
 
@@ -49,18 +49,16 @@ public class SMTPEmailServiceImpl implements EmailService {
         }
     }
 
-    // Method 2
-    // To send an email with attachment
-    public String
-    sendMailWithAttachment(EmailDetails details) {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public String sendMailWithAttachment(EmailDetails details, String smtpSender) {
+        JavaMailSender javaMailSender = getMailSender(smtpSender);
         // Creating a mime message
-        MimeMessage mimeMessage = gmailJavaMailSender.createMimeMessage();
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper;
 
         try {
 
-            // Setting multipart as true for attachments to
-            // be send
+            // Setting multipart as true for attachments to be send
             mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
             mimeMessageHelper.setFrom(details.getFromAddress());
             mimeMessageHelper.setTo(details.getToAddress().toArray(new String[0]));
@@ -68,16 +66,14 @@ public class SMTPEmailServiceImpl implements EmailService {
             mimeMessageHelper.setBcc(details.getBccAddress().toArray(new String[0]));
 
             mimeMessageHelper.setText(details.getMsgBody());
-            mimeMessageHelper.setSubject(
-                    details.getSubject());
+            mimeMessageHelper.setSubject(details.getSubject());
 
             // Adding the attachment
-            FileSystemResource file = new FileSystemResource(new File(details.getAttachment()));
-
-            mimeMessageHelper.addAttachment(file.getFilename(), file);
+            byte[] decodedBytes = Base64.getDecoder().decode(details.getAttachmentBase64());
+            mimeMessageHelper.addAttachment(details.getAttachmentName(), new ByteArrayResource(decodedBytes));
 
             // Sending the mail
-            gmailJavaMailSender.send(mimeMessage);
+            javaMailSender.send(mimeMessage);
             return "Mail sent Successfully";
         }
 
@@ -88,5 +84,17 @@ public class SMTPEmailServiceImpl implements EmailService {
             return "Error while sending mail!!!";
         }
     }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    private JavaMailSender getMailSender(String type) {
+        switch (type) {
+            case "gmail":
+                return gmailJavaMailSender;
+            case "zoho":
+                return zohoJavaMailSender;
+            default:
+                return null;
+        }
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }

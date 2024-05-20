@@ -22,6 +22,12 @@ public class ApplicationBeanConfigurations {
     @Value("${app.smtp.gmail.port}") protected Integer GMAIL_SMTP_PORT;
     @Value("${app.smtp.gmail.username}") protected String GMAIL_USER;
     @Value("${app.smtp.gmail.password}") protected String GMAIL_PASSWORD;
+
+    @Value("${app.smtp.zoho.host}") protected String ZOHO_SMTP_HOST;
+    @Value("${app.smtp.zoho.port}") protected Integer ZOHO_SMTP_PORT;
+    @Value("${app.smtp.zoho.username}") protected String ZOHO_USER;
+    @Value("${app.smtp.zoho.password}") protected String ZOHO_PASSWORD;
+
     @Value("${app.smtp.debug}") private Boolean debug;
 
 
@@ -36,6 +42,25 @@ public class ApplicationBeanConfigurations {
         // Set up email config (using udeesa email)
         mailSender.setUsername(GMAIL_USER);
         mailSender.setPassword(GMAIL_PASSWORD);
+
+        Properties props = mailSender.getJavaMailProperties();
+        props.put("mail.transport.protocol", "smtp");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.debug", debug);
+        return mailSender;
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @Bean
+    public JavaMailSender zohoJavaMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        // Set up Gmail config
+        mailSender.setHost(ZOHO_SMTP_HOST);
+        mailSender.setPort(ZOHO_SMTP_PORT);
+
+        // Set up email config (using udeesa email)
+        mailSender.setUsername(ZOHO_USER);
+        mailSender.setPassword(ZOHO_PASSWORD);
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");

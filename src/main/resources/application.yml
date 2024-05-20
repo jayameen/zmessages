@@ -7,7 +7,7 @@ spring:
       max-request-size: 10000000
 
 server:
-  port: 8086
+  port: 8087
   servlet:
     context-path: /${spring.application.name}
 
@@ -22,7 +22,12 @@ app:
     gmail:
       host: smtp.gmail.com
       port: 587
-      username: ${GMAIL_USERNAME:madan@xindus.net}
-      password: ${GMAIL_PASSWORD:admin123}
+      username: ${GMAIL_USERNAME}
+      password: ${GMAIL_PASSWORD}
+    zoho:
+      host: smtp.zeptomail.in
+      port: 587
+      username: ${ZOHOMAIL_USERNAME}
+      password: ${ZOHOMAIL_PASSWORD}
     debug: true
 

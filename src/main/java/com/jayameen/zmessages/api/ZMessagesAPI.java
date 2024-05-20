@@ -18,7 +18,13 @@ public class ZMessagesAPI {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @PostMapping("/mail")
     public String sendMail(@RequestBody EmailDetails details) {
-        String status = emailService.sendSimpleMail(details);
+        String status = emailService.sendSimpleMail(details,"zoho");
+        return status;
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @PostMapping("/mail/base64")
+    public String sendMailBase64(@RequestBody EmailDetails details) {
+        String status = emailService.sendMailWithAttachment(details,"zoho");
         return status;
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
