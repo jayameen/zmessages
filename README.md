@@ -1,6 +1,5 @@
 # ZMessages
-A simple library for displaying messages in the console.
-
+### ZMessaging REST API For Email/SMTP, SMS, AMQP, STOMP & Push Notifications
 
 ### How to use AMQP API? (Examples)
 <details>
