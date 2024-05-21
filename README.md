@@ -1,6 +1,51 @@
 # ZMessages
 A simple library for displaying messages in the console.
 
+
+### How to use AMQP API? (Examples)
+<details>
+<summary> 
+Publish Message To Exchange/Topic
+</summary>
+
+Methods: POST
+
+Path:  /zmessages/api/amqp/publish
+
+Request Body: (String or JSON)
+```json
+{
+  "topic_exchange" : "jayameen",
+  "routing_key" : "jmroutekey",
+  "message" : "TEST"
+}
+```
+or
+
+```json
+{
+  "topic_exchange" : "jayameen",
+  "routing_key" : "jmroutekey",
+  "message" : {
+    "payload" : "Hello From API Test - 1"
+  }
+}
+```
+
+Success Response: 200 OK
+```json
+{
+  "status": "ok",
+  "code": "200 OK",
+  "description": "Operation Completed Successfully!",
+  "data": [
+    "OK"
+  ]
+}
+```
+</details>
+
+
 ### How to use SMS API? (Examples)
 <details>
 <summary> 
@@ -9,7 +54,7 @@ Send SMS
 
 Methods: POST
 
-Path:  /zmessages/api/sms
+Path:  /zmessages/api/sms/transactional
 
 Request Body:
 ```json

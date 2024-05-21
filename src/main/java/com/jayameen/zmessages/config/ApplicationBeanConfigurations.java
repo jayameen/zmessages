@@ -1,17 +1,23 @@
 package com.jayameen.zmessages.config;
 
+import com.jayameen.zmessages.factory.AMQPService;
 import com.jayameen.zmessages.factory.EmailService;
 import com.jayameen.zmessages.factory.SmsService;
+import com.jayameen.zmessages.factory.impl.AMQPServiceImpl;
 import com.jayameen.zmessages.factory.impl.SMTPEmailServiceImpl;
 import com.jayameen.zmessages.factory.impl.SmsServiceImpl;
 import com.plivo.api.PlivoClient;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-
 import java.util.Properties;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 
 
 /**
@@ -38,6 +44,13 @@ public class ApplicationBeanConfigurations {
     @Value("${app.sms.plivo.auth-id}") private String PLIVO_AUTH_ID;
     @Value("${app.sms.plivo.auth-token}") private String PLIVO_AUTH_TOKEN;
 
+
+    // RabbitMQ Config
+    @Value("${rabbitmq.host}") private String rmqHost;
+    @Value("${rabbitmq.port}") private String rmqPort;
+    @Value("${rabbitmq.username}") private String rmqUsername;
+    @Value("${rabbitmq.password}") private String rmqPassword;
+    @Value("${rabbitmq.vhost}") private String rmqVhost;
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Bean
@@ -92,6 +105,34 @@ public class ApplicationBeanConfigurations {
     @Bean
     public SmsService smsService(){
         return new SmsServiceImpl();
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @Bean
+    public AMQPService amqpService(){
+        return new AMQPServiceImpl();
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @Bean
+    public ConnectionFactory connectionFactory() {
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
+        connectionFactory.setVirtualHost(rmqVhost);
+        connectionFactory.setHost(rmqHost);
+        connectionFactory.setPort(Integer.parseInt(rmqPort));
+        connectionFactory.setUsername(rmqUsername);
+        connectionFactory.setPassword(rmqPassword);
+        return connectionFactory;
+    }
+    @Bean
+    public AmqpTemplate amqpTemplate(ConnectionFactory connectionFactory) {
+        final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+        rabbitTemplate.setUseDirectReplyToContainer(false);
+        rabbitTemplate.setMessageConverter(objectToJsonConverter());
+        return rabbitTemplate;
+    }
+
+    @Bean
+    public Jackson2JsonMessageConverter objectToJsonConverter(){
+        return new Jackson2JsonMessageConverter();
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

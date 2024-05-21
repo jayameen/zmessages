@@ -36,6 +36,11 @@ app:
     plivo:
         auth-id: ${PLIVO_AUTH_ID:'default'}
         auth-token: ${PLIVO_AUTH_TOKEN:'default'}
+  amqp: rabbitmq
 
-
-
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: ${RABBITMQ_USERNAME:'guest'}
+  password: ${RABBITMQ_PASSWORD:'guest'}
+  vhost: /
